@@ -38,6 +38,12 @@ const App: React.FC = () => {
       >
         Logout 🚪
       </button>
+      <button 
+        onClick={() => console.log("Ipaadi vasama sikkitiyae. ")}
+        className="absolute top-4 right-24 z-20 px-4 py-2 bg-white/50 backdrop-blur-md text-love-600 font-semibold rounded-full border border-love-200 hover:bg-love-100 transition-all duration-300 shadow-sm"
+      >
+        Important Note 📝
+      </button>
 
       <main className="w-full max-w-2xl px-4 py-12 z-10 flex flex-col items-center text-center">
         
