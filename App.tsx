@@ -32,18 +32,20 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-love-50 overflow-hidden relative flex flex-col items-center">
       <Confetti />
 
+<button 
+  onClick={() => console.log("Ipaadi vasama sikkitiyae.")}
+  className="absolute top-4 right-24 z-20 px-6 py-2.5 bg-gradient-to-r from-love-400 to-love-600 text-white font-bold rounded-full border-2 border-white/30 shadow-[0_0_15px_rgba(244,63,94,0.4)] hover:shadow-[0_0_25px_rgba(244,63,94,0.6)] hover:scale-110 active:scale-95 transition-all duration-300 animate-pulse flex items-center gap-2"
+>
+  <span className="animate-bounce">📝</span>
+  <span className="tracking-wide">Important Note</span>
+</button>
       <button 
         onClick={handleLogout}
         className="absolute top-4 right-4 z-20 px-4 py-2 bg-white/50 backdrop-blur-md text-love-600 font-semibold rounded-full border border-love-200 hover:bg-love-100 transition-all duration-300 shadow-sm"
       >
         Logout 🚪
       </button>
-      <button 
-        onClick={() => console.log("Ipaadi vasama sikkitiyae. ")}
-        className="absolute top-4 right-24 z-20 px-4 py-2 bg-white/50 backdrop-blur-md text-love-600 font-semibold rounded-full border border-love-200 hover:bg-love-100 transition-all duration-300 shadow-sm"
-      >
-        Important Note 📝
-      </button>
+
 
       <main className="w-full max-w-2xl px-4 py-12 z-10 flex flex-col items-center text-center">
         
