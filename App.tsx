@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import LoginForm from './components/LoginForm';
 import LoveCalculator from './components/LoveCalculator';
 import Confetti from './components/Confetti';
-import { getRomanticQuote } from './services/geminiService';
 
 const App: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentUser, setCurrentUser] = useState('');
   const [currentPartner, setCurrentPartner] = useState('');
-  const [quote, setQuote] = useState('Consulting the magic mirror for a quote...');
+  const quote = "Love looks not with the eyes, but with the mind.";
 
   const handleLogin = (name: string, partner: string) => {
     setCurrentUser(name);
@@ -22,19 +21,8 @@ const App: React.FC = () => {
       setIsAuthenticated(false);
       setCurrentUser('');
       setCurrentPartner('');
-      setQuote('Consulting the magic mirror for a quote...');
     }
   };
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      const fetchQuote = async () => {
-        const q = await getRomanticQuote();
-        setQuote(q);
-      };
-      fetchQuote();
-    }
-  }, [isAuthenticated]);
 
   if (!isAuthenticated) {
     return <LoginForm onLoginSuccess={handleLogin} />;
