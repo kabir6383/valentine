@@ -35,7 +35,7 @@ const App: React.FC = () => {
 <button 
   onClick={() => {
     console.log("Ipaadi vasama sikkitiyae.");
-    alert("Ipaadi vasama sikkitiyae. 😉");
+    alert("Ipaadi vasama sikkitiyae. 😉admin Knows your Secret");
   }}
   className="absolute top-4 right-24 z-20 px-6 py-2.5 bg-gradient-to-r from-love-400 to-love-600 text-white font-bold rounded-full border-2 border-white/30 shadow-[0_0_15px_rgba(244,63,94,0.4)] hover:shadow-[0_0_25px_rgba(244,63,94,0.6)] hover:scale-110 active:scale-95 transition-all duration-300 animate-pulse flex items-center gap-2"
 >
